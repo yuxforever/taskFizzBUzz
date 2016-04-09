@@ -16,6 +16,7 @@
 		AA92892A1CA2F82800E31730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9289281CA2F82800E31730 /* LaunchScreen.storyboard */; };
 		AA9289351CA2F82800E31730 /* taskFizzBUzzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9289341CA2F82800E31730 /* taskFizzBUzzTests.m */; };
 		AA9289401CA2F82800E31730 /* taskFizzBUzzUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA92893F1CA2F82800E31730 /* taskFizzBUzzUITests.m */; };
+		AA9289521CA2FC5000E31730 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9289511CA2FC5000E31730 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		AA92893B1CA2F82800E31730 /* taskFizzBUzzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taskFizzBUzzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA92893F1CA2F82800E31730 /* taskFizzBUzzUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = taskFizzBUzzUITests.m; sourceTree = "<group>"; };
 		AA9289411CA2F82800E31730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9289501CA2FC5000E31730 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		AA9289511CA2FC5000E31730 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 		AA9289161CA2F82800E31730 /* taskFizzBUzz */ = {
 			isa = PBXGroup;
 			children = (
+				AA9289501CA2FC5000E31730 /* TableViewController.h */,
+				AA9289511CA2FC5000E31730 /* TableViewController.m */,
 				AA92891A1CA2F82800E31730 /* AppDelegate.h */,
 				AA92891B1CA2F82800E31730 /* AppDelegate.m */,
 				AA92891D1CA2F82800E31730 /* ViewController.h */,
@@ -276,6 +281,7 @@
 				AA92891F1CA2F82800E31730 /* ViewController.m in Sources */,
 				AA92891C1CA2F82800E31730 /* AppDelegate.m in Sources */,
 				AA9289251CA2F82800E31730 /* taskFizzBUzz.xcdatamodeld in Sources */,
+				AA9289521CA2FC5000E31730 /* TableViewController.m in Sources */,
 				AA9289191CA2F82800E31730 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

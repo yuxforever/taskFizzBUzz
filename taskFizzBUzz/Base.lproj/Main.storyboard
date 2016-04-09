@@ -1,25 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wv5-8c-MNL">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="First Page" id="N5r-ul-GtO"/>
+                                    <tabBarItem title="TableView" id="9tv-MY-Ulf"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0Gf-Qa-DkQ"/>
+                                </connections>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iu7-QQ-KiA">
+                                <rect key="frame" x="0.0" y="30" width="600" height="521"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="c7s-H8-w9b"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="F6O-zw-J5d"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tab Bar" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Uv-j8-hHJ">
+                                <rect key="frame" x="219" y="238" width="162" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Uv-j8-hHJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="218" id="Cvp-y0-xi0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Uv-j8-hHJ" secondAttribute="trailing" constant="110" id="EXZ-eX-WCt"/>
+                            <constraint firstItem="5Uv-j8-hHJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="199" id="JS8-6k-60v"/>
+                            <constraint firstItem="Iu7-QQ-KiA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="LPT-CL-PtZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iu7-QQ-KiA" secondAttribute="trailing" constant="-20" id="MtQ-Ty-Kj1"/>
+                            <constraint firstItem="Wv5-8c-MNL" firstAttribute="top" secondItem="Iu7-QQ-KiA" secondAttribute="bottom" id="Ptf-Pz-NQL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Uv-j8-hHJ" secondAttribute="trailing" constant="199" id="W4s-az-rMz"/>
+                            <constraint firstItem="Wv5-8c-MNL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="XEV-xW-Yhg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wv5-8c-MNL" secondAttribute="trailing" constant="-20" id="jcJ-L8-OgY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wv5-8c-MNL" secondAttribute="bottom" id="leg-cf-8CP"/>
+                            <constraint firstItem="Iu7-QQ-KiA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="nWF-95-bHK"/>
+                            <constraint firstItem="Wv5-8c-MNL" firstAttribute="top" secondItem="5Uv-j8-hHJ" secondAttribute="bottom" constant="283" id="nkh-bq-ZxU"/>
+                            <constraint firstItem="5Uv-j8-hHJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="218" id="oH1-gs-zKb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JS8-6k-60v"/>
+                                <exclude reference="W4s-az-rMz"/>
+                                <exclude reference="oH1-gs-zKb"/>
+                                <exclude reference="nkh-bq-ZxU"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="TabBar" destination="Wv5-8c-MNL" id="gDN-6p-0Zc"/>
+                        <outlet property="TableView" destination="Iu7-QQ-KiA" id="nFl-Zu-aC4"/>
+                        <outlet property="TextTapbar" destination="5Uv-j8-hHJ" id="lYR-N8-Dok"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="369" y="163"/>
         </scene>
     </scenes>
 </document>

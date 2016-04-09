@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UITabBarDelegate>
+
+#define kSelectedTabDefaultsKey @"Selected Tab"
+enum {
+    kByFirstPage,
+    kByTableView,
+};
+
+
+
+
+
+@property (weak, nonatomic) IBOutlet UITextField *TextTapbar;
+@property (weak, nonatomic) IBOutlet UITabBar *TabBar;
+@property (weak, nonatomic) IBOutlet UITableView *TableView;
 
 
 @end
